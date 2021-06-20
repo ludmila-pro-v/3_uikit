@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+  <title>Ui Kit</title>
+</head>
+
+<body>
+  <section class="forms">
+    <form action="#" class="form__group">
+      <div class="form__col">
+        <div class="input__group">
+          <label for="form-basic" class="form__label">Input Basic</label>
+          <input type="text" class="form__input" id="form-basic" placeholder="Placeholder">
+        </div>
+        <div class="input__group">
+          <label for="form-error" class="form__label">Input Error</label>
+          <input type="text" class="form__input" id="form-error" placeholder="Value">
+        </div>
+        <div class="input__group">
+          <label for="form-focused" class="form__label">Input Focused</label>
+          <input type="text" class="form__input" id="form-focused" placeholder="Value">
+        </div>
+        <div class="input__group">
+          <label for="form-disabled" class="form__label">Input Disabled</label>
+          <input type="text" class="form__input" id="form-disabled" placeholder="Value" disabled>
+        </div>
+        <div class="input__group">
+          <label for="form-choose" class="form__label">Please choose:</label>
+          <noscript>
+            <select size="1" name="choose" id="form-choose" class="form__input">
+              <option value="Option">Option</option>
+              <option value="Option-1">Option-1</option>
+              <option value="Option-2">Option-2</option>
+              <option value="Option-3">Option-3</option>
+            </select>
+          </noscript>
+
+          <div class="select form__input">
+            <div class="select__header">
+              <span class="select__change select__start">Option</span>
+              <div class="select__icon">&#11167</div>
+            </div>
+            <div class="select__body">
+              <div class="select__item">Option-1</div>
+              <div class="select__item">Option-2</div>
+              <div class="select__item">Option-3</div>
+            </div>
+          </div>
+
+        </div>
+        <div class="input__choose form__input">
+          <input class="option-checkbox" type="checkbox" id="option-check" checked>
+          <label for="option-check">Option</label>
+          <input class="option-checkbox" type="checkbox" id="option-1">
+          <label for="option-1"></label>
+          <input class="option-checkbox" type="checkbox" id="option-2">
+          <label for="option-2"></label>
+          <input class="option-checkbox" type="checkbox" id="option-3" disabled>
+          <label for="option-3"></label>
+        </div>
+
+        <div class="input__choose form__input">
+          <input class="radio-checkbox" type="radio" name="radio-check" id="radio-check" checked>
+          <label for="radio-check">Option</label>
+          <input class="radio-checkbox" type="radio" name="radio-check" id="radio-check-1">
+          <label for="radio-check-1"></label>
+          <input class="radio-checkbox" type="radio" name="radio-check" id="radio-check-2">
+          <label for="radio-check-2"></label>
+          <input class="radio-checkbox" type="radio" name="radio-check" id="radio-check-3" disabled>
+          <label for="radio-check-3"></label>
+        </div>
+      </div>
+      <!-- /.form__col -->
+      <div class="form__col">
+        <input type="text" class="form__input" placeholder="Placeholder">
+        <input type="text" class="form__input serch-left" placeholder="Placeholder">
+        <input type="text" class="form__input serch-right" placeholder="Placeholder">
+        <input type="url" class="form__input" placeholder="www. 2dots.co">
+        <input type="text" class="form__input" placeholder="Disabled" disabled>
+        <input type="text" class="form__input fotm__input--blue" id="formblue" placeholder="Value">
+        <noscript>
+          <select size="1" name="choose-1" id="Choose">
+            <option value="Choose">Choose</option>
+            <option value="Choose-1">Choose-1</option>
+            <option value="Choose-2">Choose-2</option>
+            <option value="Choose-3">Choose-3</option>
+          </select>
+        </noscript>
+
+        <div class="select form__input">
+          <div class="select__header">
+            <span class="select__change select__start">Choose</span>
+            <div class="select__icon">&#11167</div>
+          </div>
+          <div class="select__body">
+            <div class="select__item">Choose-1</div>
+            <div class="select__item">Choose-2</div>
+            <div class="select__item">Choose-3</div>
+          </div>
+        </div>
+
+        <div class="input__choose form__input">
+          <label for="tumbler" class="tumbler__wrap">
+            <input class="tumbler__checkbox" type="checkbox" id="tumbler" checked>
+            <span class="tumbler__btn"></span>
+          </label>
+          <span class="tumbler__label">Option</span>
+        </div>
+        <!-- /.input__choose form__input --> 
+        <div class="input__choose form__input">
+          <label for="tumbler-1" class="tumbler__wrap">
+            <input class="tumbler__checkbox" type="checkbox" id="tumbler-1" checked>
+            <span class="tumbler__btn"></span>
+          </label>
+          <label for="tumbler-2" class="tumbler__wrap">
+            <input class="tumbler__checkbox" type="checkbox" id="tumbler-2">
+            <span class="tumbler__btn"></span>
+          </label>
+          <label for="tumbler-3" class="tumbler__wrap">
+            <input class="tumbler__checkbox" type="checkbox" id="tumbler-3" disabled>
+            <span class="tumbler__btn"></span>
+          </label>
+        </div>
+        <!-- /.input__choose form__input --> 
+        <div class="input__choose form__input">
+          <label for="tumbler-small-1" class="tumbler__wrap tumbler__wrap-small">
+            <input class="tumbler__checkbox" type="checkbox" id="tumbler-small-1" checked>
+            <span class="tumbler__btn tumbler__btn-small"></span>
+          </label>
+          <label for="tumbler-small-2" class="tumbler__wrap tumbler__wrap-small">
+            <input class="tumbler__checkbox" type="checkbox" id="tumbler-small-2">
+            <span class="tumbler__btn tumbler__btn-small"></span>
+          </label>
+          <label for="tumbler-small-3" class="tumbler__wrap tumbler__wrap-small">
+            <input class="tumbler__checkbox" type="checkbox" id="tumbler-small-3" disabled>
+            <span class="tumbler__btn tumbler__btn-small"></span>
+          </label>
+        </div>
+        <!-- /.input__choose form__input -->
+
+      </div>
+      <!-- /.form__col -->
+      <div class="form__col">
+        <div class="input__group">
+          <label for="textarea-act">Textarea</label>
+          <textarea name="textarea-act" id="textarea-act" placeholder="Placeholder" cols="30" rows="10"
+            class="form__input"></textarea>
+        </div>
+        <div class="input__group">
+          <label for="textarea-err">Textarea</label>
+          <textarea name="textarea-err" id="textarea-err" placeholder="Value" cols="30" rows="10"
+            class="form__input"></textarea>
+        </div>
+        <input type="range" min="50%" class="form__input">
+        <input type="range" min="25%" class="form__input">
+      </div>
+      <!-- /.form__col -->
+    </form>
+    <!-- /.form__group -->
+  </section>
+  <!-- /.forms -->
+</body>
+
+</html>
