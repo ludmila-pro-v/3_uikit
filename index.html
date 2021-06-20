@@ -7,8 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <script src="main.js" defer></script>
+  <link rel="stylesheet" href="style/rSlider.min.css">
+
+  <link rel="stylesheet" href="style/nouislider.min.css">
+  <link rel="stylesheet" href="style/style.css">
+  <script src="js/nouislider.min.js" defer></script>
+  <script src="js/rSlider.min.js" defer></script>
+  <script src="js/main.js" defer></script>
   <title>Ui Kit</title>
 </head>
 
@@ -114,7 +119,7 @@
           </label>
           <span class="tumbler__label">Option</span>
         </div>
-        <!-- /.input__choose form__input --> 
+        <!-- /.input__choose form__input -->
         <div class="input__choose form__input">
           <label for="tumbler-1" class="tumbler__wrap">
             <input class="tumbler__checkbox" type="checkbox" id="tumbler-1" checked>
@@ -129,7 +134,7 @@
             <span class="tumbler__btn"></span>
           </label>
         </div>
-        <!-- /.input__choose form__input --> 
+        <!-- /.input__choose form__input -->
         <div class="input__choose form__input">
           <label for="tumbler-small-1" class="tumbler__wrap tumbler__wrap-small">
             <input class="tumbler__checkbox" type="checkbox" id="tumbler-small-1" checked>
@@ -159,10 +164,42 @@
           <textarea name="textarea-err" id="textarea-err" placeholder="Value" cols="30" rows="10"
             class="form__input"></textarea>
         </div>
-        <input type="range" min="50%" class="form__input">
-        <input type="range" min="25%" class="form__input">
+
+        <!-- custom slider -->
+        <div id="form-1">
+          <div class="bar form__bar">
+            <div class="label"></div>
+            <div id="m-slider"></div>
+          </div>
+
+          <div class="bar form__bar">
+            <div class="label"></div>
+            <div id="r-slider"></div>
+          </div>
+          <div class="bar flex">
+            <div id="reset" class="button"></div>
+          </div>
+
+
+
+        </div>
+
+        <div class="slider-container">
+          <input type="text" id="slider" class="slider" />
+        </div>
+        <div class="slider-container">
+          <input type="text" id="slider2" class="slider" />
+        </div>
+        <div class="slider-container">
+          <input type="text" id="slider3" class="slider" />
+        </div>
+
+        <!-- custom slider -->
+
       </div>
       <!-- /.form__col -->
+
+
     </form>
     <!-- /.form__group -->
   </section>
