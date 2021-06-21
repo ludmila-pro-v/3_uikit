@@ -373,6 +373,10 @@ input:disabled+.tumbler__btn:before {
   margin: 48px 0;
 }
 
+.form__bar-next {
+  margin-bottom: 85px;
+}
+
 .noUi-tooltip {
   display: none;
 }
@@ -381,13 +385,13 @@ input:disabled+.tumbler__btn:before {
   background: #18A0FB;
 }
 
-.form__bar>.noUi-horizontal {
+.noUi-horizontal {
   height: 4px;
   border: none;
   border-radius: 10px;
 }
 
-.form__bar>.noUi-horizontal .noUi-handle {
+.noUi-horizontal .noUi-handle {
   width: 15px;
   height: 15px;
   left: -17px;
