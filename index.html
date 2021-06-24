@@ -7,12 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style/rSlider.min.css">
-
+  <!-- <link rel='stylesheet' href='https://unpkg.com/v-calendar/lib/v-calendar.min.css'>  -->
   <link rel="stylesheet" href="style/nouislider.min.css">
   <link rel="stylesheet" href="style/style.css">
+  <script src='https://unpkg.com/vue/dist/vue.js' defer></script>
+  <script src='https://unpkg.com/v-calendar' defer></script>
   <script src="js/nouislider.min.js" defer></script>
-  <script src="js/rSlider.min.js" defer></script>
   <script src="js/main.js" defer></script>
   <title>Ui Kit</title>
 </head>
@@ -82,6 +82,12 @@
           <input class="radio-checkbox" type="radio" name="radio-check" id="radio-check-3" disabled>
           <label for="radio-check-3"></label>
         </div>
+
+        <!-- Calendar -->
+
+        <v-calendar />
+        <v-date-picker v-model="date" />
+
       </div>
       <!-- /.form__col -->
       <div class="form__col">
@@ -151,6 +157,8 @@
         </div>
         <!-- /.input__choose form__input -->
 
+
+
       </div>
       <!-- /.form__col -->
       <div class="form__col">
@@ -199,6 +207,226 @@
       <!-- /.form__col -->
 
 
+    </form>
+    <!-- /.form__group -->
+    <form action="#" class="form__group">
+      <div class="form__col-bg">
+        <h2>Buttons Big</h2>
+        <!-- <div class="buttons__group-bg"></div> -->
+        <!-- /.buttons__group-bg -->
+        <div class="buttons__group">
+          <button class="button button-bg button--blue">Download</button>
+          <button class="button button-bg button--grey">Download</button>
+          <button class="button button-bg button--wight">Download</button>
+          <button class="button button-bg button--light">Download</button>
+        </div>
+        <div class="buttons__group">
+          <button class="button button-bg button--blue">Download
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 12V19H20V12"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 3.50073L12 13.5007"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 13.5007L15.375 10.1257" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 13.5007L8.625 10.1257"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <button class="button button-bg button--grey">Download
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 12V19H20V12"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 3.50073L12 13.5007"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 13.5007L15.375 10.1257" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 13.5007L8.625 10.1257"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <button class="button button-bg button--wight">Download
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 12V19H20V12"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 3.50073L12 13.5007"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 13.5007L15.375 10.1257" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 13.5007L8.625 10.1257"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <button class="button button-bg button--light">Download
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 12V19H20V12"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 3.50073L12 13.5007"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 13.5007L15.375 10.1257" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 13.5007L8.625 10.1257"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+        <div class="buttons__group">
+          <button class="button button-bg button--blue">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 12V19H20V12"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 3.50073L12 13.5007"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 13.5007L15.375 10.1257" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 13.5007L8.625 10.1257"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Download</button>
+          <button class="button button-bg button--grey">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 12V19H20V12"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 3.50073L12 13.5007"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 13.5007L15.375 10.1257" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 13.5007L8.625 10.1257"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Download</button>
+          <button class="button button-bg button--wight">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 12V19H20V12"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 3.50073L12 13.5007"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 13.5007L15.375 10.1257" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 13.5007L8.625 10.1257"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Download</button>
+          <button class="button button-bg button--light">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 12V19H20V12"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 3.50073L12 13.5007"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 13.5007L15.375 10.1257" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 13.5007L8.625 10.1257"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Download</button>
+        </div>
+        <h2>Buttons Small</h2>
+        <div class="buttons__group">
+          <button class="button button-sm button--blue">Download</button>
+          <button class="button button-sm button--grey">Download</button>
+          <button class="button button-sm button--wight">Download</button>
+          <button class="button button-sm button--light">Download</button>
+        </div>
+        <!-- .buttons__group -->
+        <div class="buttons__group">
+          <button class="button button-sm button--blue">Download
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 12V19H20V12"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 3.50073L12 13.5007"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 13.5007L15.375 10.1257" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 13.5007L8.625 10.1257"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <button class="button button-sm button--grey">Download
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 12V19H20V12"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 3.50073L12 13.5007"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 13.5007L15.375 10.1257" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 13.5007L8.625 10.1257"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <button class="button button-sm button--wight">Download
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 12V19H20V12"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 3.50073L12 13.5007"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 13.5007L15.375 10.1257" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 13.5007L8.625 10.1257"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <button class="button button-sm button--light">Download
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 12V19H20V12"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 3.50073L12 13.5007"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 13.5007L15.375 10.1257" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 13.5007L8.625 10.1257"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+        <!-- .buttons__group -->
+        <div class="buttons__group">
+          <button class="button button-sm button--red">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 12V19H20V12"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 3.50073L12 13.5007"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 13.5007L15.375 10.1257" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 13.5007L8.625 10.1257"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Download</button>
+          <button class="button button-sm button--grey">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 12V19H20V12"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 3.50073L12 13.5007"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 13.5007L15.375 10.1257" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 13.5007L8.625 10.1257"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Download</button>
+          <button class="button button-sm button--wight">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 12V19H20V12"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 3.50073L12 13.5007"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 13.5007L15.375 10.1257" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 13.5007L8.625 10.1257"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Download</button>
+          <button class="button button-sm button--light">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 12V19H20V12"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 3.50073L12 13.5007"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 13.5007L15.375 10.1257" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 13.5007L8.625 10.1257"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Download</button>
+        </div>
+        <!-- .buttons__group -->
+        <div class="buttons__group">
+          <button class="button button-xs button--wight">Tag <p>&#10006</p></button>
+          <button class="button button-xs button--blue">Tag<p>&#10006</p></button>
+        </div>
+        <!-- /.buttons__group -->
+        <div class="buttons__group">
+          <button class="button button-xs button--grey">Tag</button>
+          <button class="button button-xs button--blue">Tag</button>
+        </div>
+        <!-- /.buttons__group -->
+      </div>
+      <!-- /.form__col -->
+
+      <div class="form__col-bg">
+        <div class="tabs__nav tabs-nav__serch">
+          <input type="radio" name="tab-btn" id="tab-btn-1" value="" checked>
+          <label for="tab-btn-1" class="tabs-nav__item  item__serch item__first">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.4834 9.18645L10.2381 9.53097L10.5371 9.83005L14.3535 13.6465C14.5488 13.8417 14.5488 14.1583 14.3535 14.3535C14.1583 14.5488 13.8417 14.5488 13.6465 14.3535L9.83005 10.5371L9.53097 10.2381L9.18645 10.4834C8.28755 11.1236 7.18845 11.5 6 11.5C2.96243 11.5 0.5 9.03756 0.5 6C0.5 2.96243 2.96243 0.5 6 0.5C9.03756 0.5 11.5 2.96243 11.5 6C11.5 7.18845 11.1236 8.28755 10.4834 9.18645ZM6 1.5C3.51472 1.5 1.5 3.51472 1.5 6C1.5 8.48524 3.51471 10.5 6 10.5C8.48524 10.5 10.5 8.48524 10.5 6C10.5 3.51471 8.48524 1.5 6 1.5Z"/>
+              </svg>
+              
+          </label>
+          <input type="radio" name="tab-btn" id="tab-btn-2" value="">
+          <label for="tab-btn-2" class="tabs-nav__item item__serch">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 12V19H20V12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 3.50073L12 13.5007" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 13.5007L15.375 10.1257" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 13.5007L8.625 10.1257" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              
+          </label>
+          <input type="radio" name="tab-btn" id="tab-btn-3" value="">
+          <label for="tab-btn-3" class="tabs-nav__item item__serch">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15 12.51H15.5V12.01V10.51H16.5V13.01C16.5 13.2869 16.2769 13.51 16 13.51H8C7.72314 13.51 7.5 13.2869 7.5 13.01V10.51H8.5V12.01V12.51H9H15Z"/>
+              <path d="M2.92205 6.30863L2.90861 6.29902L5.3096 3.10657L5.3101 3.1059C5.58912 2.73363 6.0385 2.50903 6.508 2.50903H17.508C17.9791 2.50903 18.4295 2.73545 18.7101 3.11188L18.7105 3.11237L21.1053 6.31638L21.0935 6.32544L21.3866 6.72011C21.4672 6.82871 21.5 6.92251 21.5 7.01003V18.01C21.5 18.8369 20.8269 19.51 20 19.51H4C3.17314 19.51 2.5 18.8369 2.5 18.01V7.01003C2.5 6.92206 2.53338 6.82686 2.615 6.71803L2.92205 6.30863ZM6.508 3.51003H6.2584L6.10838 3.70952L4.60438 5.70952L4.0024 6.51003H5.004H19.003H20.001L19.4035 5.71067L17.9085 3.71067L17.7585 3.51003H17.508H6.508ZM3.5 18.01V18.51H4H20.002H20.5021L20.502 18.0099L20.5 8.00993L20.4999 7.51003H20H4H3.5V8.01003V18.01Z"/>
+              </svg>
+              
+              
+          </label>
+        </div>
+        <!-- /.tabs__nav tabs-nav -->
+        <div class="tabs__nav tabs-nav">
+          <input type="radio" name="tab" id="tab-1" value="" checked>
+          <label for="tab-1" class="tabs-nav__item item__change item__first">Tab 1</label>
+          <input type="radio" name="tab" id="tab-2" value="">
+          <label for="tab-2" class="tabs-nav__item item__change">Tab 1</label>
+        </div>
+        <!-- /.tabs__nav tabs-nav -->
+        <div class="tabs__nav tabs-nav">
+          <input type="radio" name="tab-size" id="tab-size-1" value="" checked>
+          <label for="tab-size-1" class="tabs-nav__item item__size item__first">S</label>
+          <input type="radio" name="tab-size" id="tab-size-2" value="">
+          <label for="tab-size-2" class="tabs-nav__item item__size">M</label>
+          <input type="radio" name="tab-size" id="tab-size-3" value="">
+          <label for="tab-size-3" class="tabs-nav__item item__size">L</label>
+        </div>
+        <!-- /.tabs__nav tabs-nav -->
+      </div>
+      <!-- /.form__col-bg -->
     </form>
     <!-- /.form__group -->
   </section>

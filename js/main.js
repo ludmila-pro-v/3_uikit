@@ -1,3 +1,23 @@
+// V-calender
+
+// import Vue from 'vue';
+// import { createApp } from 'vue';
+// import VCalendar from 'v-calendar';
+
+// Use v-calendar & v-date-picker components
+// Vue.use(VCalendar, {
+//   componentPrefix: 'vc',
+// });
+
+// new Vue({
+//     el: '#app',
+//     data: {
+//       selectedDate: null,
+//     }
+//   });
+
+
+
 
 // Custom slider
 // width 1 handle
