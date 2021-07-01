@@ -18,9 +18,11 @@
 
 
 
-
 // Custom slider
 // width 1 handle
+
+
+// sliders
 
 var sliders = document.getElementsByClassName('sliders');
 
@@ -125,3 +127,127 @@ let select = function () {
 
 
 select();
+
+
+// tabs
+
+const tabsHandlerElems = document.querySelectorAll('[data-tabs-handler]');
+
+for (const tab of tabsHandlerElems) {
+  tab.addEventListener('click', () => {
+    var container = tab.parentElement.parentElement;
+    var contauinerItems = container.querySelectorAll('[data-tabs-handler]');
+    contauinerItems.forEach(item => {
+      if (tab === item) {
+        item.classList.add('current__item-active');
+      } else {
+        item.classList.remove('current__item-active');
+      }
+    });
+
+  });
+}
+
+// Step by Step Navigation
+
+const DOMstrings = {
+  stepsBtnClass: 'multisteps-form__progress-btn',
+  stepsBtns: document.querySelectorAll(`.multisteps-form__progress-btn`),
+  stepsBar: document.querySelectorAll('.multisteps-form__progress'),
+};
+
+
+//remove class from a set of items
+const removeClasses = (elemSet, className) => {
+
+  elemSet.forEach(elem => {
+
+    elem.classList.remove(className);
+
+  });
+
+};
+
+//return exect parent node of the element
+const findParent = (elem, parentClass) => {
+
+  let currentNode = elem;
+
+  while (!currentNode.classList.contains(parentClass)) {
+    currentNode = currentNode.parentNode;
+  }
+
+  return currentNode;
+
+};
+
+//get active button step number
+const getActiveStep = elem => {
+  var progressBar = elem.parentElement;
+  var progressItems = progressBar.querySelectorAll('.multisteps-form__progress-btn');
+  return Array.from(progressItems).indexOf(elem);
+};
+
+
+//STEPS BAR CLICK FUNCTION
+DOMstrings.stepsBar.forEach(elem => {
+  elem.addEventListener('click', e => {
+
+    //check if click target is a step button
+    const eventTarget = e.target;
+  
+    
+  
+    if (!eventTarget.classList.contains(`${DOMstrings.stepsBtnClass}`)) {
+      return;
+    }
+
+
+    var progressItems = elem.querySelectorAll('.multisteps-form__progress-btn');
+    
+  
+    //get active button step number
+    const activeStep = getActiveStep(eventTarget);
+
+    //set all steps before clicked (and clicked too) to active
+  
+    removeClasses(progressItems, 'js-active');
+    removeClasses(progressItems, 'js-next');
+
+    //set picked items to active
+    progressItems.forEach((elem, index) => {
+  
+      if (index <= activeStep) {
+        elem.classList.add('js-active');
+      }
+        
+    });
+    var nextIndex = activeStep + 1;
+    if (nextIndex < progressItems.length) {
+      progressItems[nextIndex].classList.add('js-next')
+    }
+  });
+}); 
+// End of step by step Navigation
+
+// Pagination
+
+// const pageLinkElems = document.querySelectorAll('[data-page-link]');
+// console.log('pageLinkElems: ', pageLinkElems);
+
+// for (const tab of pageLinkElems) {
+//   console.log('tab: ', tab);
+//   tab.addEventListener('click', () => {
+//     console.log('tab: ', tab);
+//     var container = tab.parentElement.parentElement;
+//     var contauinerItems = container.querySelectorAll('[data-page-link]');
+//     contauinerItems.forEach(item => {
+//       if (tab === item) {
+//         item.classList.add('page-link-active');
+//       } else {
+//         item.classList.remove('page-link-active');
+//       }
+//     });
+
+//   });
+// }
