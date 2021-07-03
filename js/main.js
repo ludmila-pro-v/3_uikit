@@ -251,3 +251,32 @@ DOMstrings.stepsBar.forEach(elem => {
 
 //   });
 // }
+
+
+// Alert
+
+const alertElems = document.querySelectorAll('.alert__close');
+
+alertElems.forEach(item => {
+  item.addEventListener('click', () => {
+    const wrapper = item.parentElement;
+    wrapper.classList.toggle('hidden');
+    wrapper.classList.remove('alert__item');
+    wrapper.classList.remove('modal__wrapper');
+  });
+});
+
+// Modal
+
+const modal = document.querySelector('.modal');
+
+
+modal.addEventListener('click', (event) => {
+  const target = event.target;
+  const modalOpen = modal.querySelector('.modal__window');
+  if(target.classList.contains('overlay') || target.classList.contains('modal__close')  ) {
+    modalOpen.classList.toggle('hidden');
+    modalOpen.classList.toggle('modal__wrapper');
+  };
+  
+});
