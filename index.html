@@ -816,7 +816,7 @@
             </div>
           </div>
         </div>
-  
+
         <div class="alert__group">
           <div class="alert__item alert--light">
             <p class="alert-title">This is an alert</p>
@@ -877,8 +877,150 @@
     </form>
     <!-- /.form__group -->
 
-    <form action="#" class="form__group">
-      
+    <form action="#" class="form__group form__wrapper">
+      <div class="components__item">
+        <svg width="68" height="68" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g opacity="0.3">
+            <path
+              d="M34 59.5C48.0833 59.5 59.5 48.0833 59.5 34C59.5 19.9167 48.0833 8.5 34 8.5C19.9167 8.5 8.5 19.9167 8.5 34C8.5 48.0833 19.9167 59.5 34 59.5Z"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M34 46.75V21.25" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M34 21.25L24.4375 30.8125" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M34 21.25L43.5625 30.8125" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </g>
+        </svg>
+        <p class="upload__title">Add Files</p>
+        <p class="upload__subtitle">Drag & Drop to upload or</p>
+      </div>
+      <!-- /.components__item -->
+      <div class="components__item components--red">
+        <svg width="68" height="68" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g opacity="0.3">
+            <path
+              d="M34 59.5C48.0833 59.5 59.5 48.0833 59.5 34C59.5 19.9167 48.0833 8.5 34 8.5C19.9167 8.5 8.5 19.9167 8.5 34C8.5 48.0833 19.9167 59.5 34 59.5Z"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M34 46.75V21.25" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M34 21.25L24.4375 30.8125" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M34 21.25L43.5625 30.8125" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </g>
+        </svg>
+        <p class="upload__title">Something went wrong.</p>
+        <p class="upload__subtitle">Please try again</p>
+      </div>
+      <!-- /.components__item -->
+      <div class="components__item">
+        <div class="upload__title upload__title-progress progress-percent__value">
+
+          <input type="number" class="progress-percent" value="69">
+          <span>% uploaded</span>
+        </div>
+
+        <progress id="file" max="100" value="69" class="progress-value"></progress>
+        <p class="upload__subtitle">Please wait...</p>
+        <button class="upload__button button button--wight">Cancel</button>
+      </div>
+      <!-- /.components__item -->
+      <div class="components__item">
+        <div class="progress__wrapper">
+          <svg class="progress-circle" width="122" height="122">
+            <circle class="progress-scale" stroke="#e0e0e0" fill="transparent" stroke-width="5" cx="61" cy="61"
+              r="56" />
+            <circle class="progress-ring" stroke="#18A0FB" fill="transparent" stroke-width="5" cx="61" cy="61" r="56" />
+          </svg>
+          <div class="progress__value">
+            <input type="number" class="percent" value="69">
+            <span>%</span>
+          </div>
+
+        </div>
+        <!-- /.progress__wrapper -->
+
+        <p class="upload__subtitle">Uploading ...</p>
+        <button class="upload__button button button--wight" type="button">Cancel</button>
+      </div>
+      <!-- /.components__item -->
+      <div class="components__item components__loading">
+        <div class="upload__header">
+          <p class="upload__header-title">Recent Uploads</p>
+          <button class="upload__button-sm button button--wight">
+            <p>Upload</p>
+            <img src="img/Upload.svg" alt="upload">
+          </button>
+          <!-- /.upload__button -->
+        </div>
+        <!-- /.upload__header -->
+        <div class="progress__group">
+          <img src="img/progress-file.svg" alt="file">
+          <div class="progress__text">
+            <p class="progress__file-name">File Name.jpg</p>
+            <p class="progress__time">23 mins ago</p>
+          </div>
+          <div class="progress__image">
+            <img src="img/progress-1.svg" alt="#">
+          </div>
+
+        </div>
+        <!-- /.progress__group -->
+        <div class="progress__status">
+          <div class="progress__color progress__color--blue"></div>
+        </div>
+
+        <div class="progress__group">
+          <img src="img/progress-file.svg" alt="file">
+          <div class="progress__text">
+            <p class="progress__file-name">File Name.jpg</p>
+            <p class="progress__time">23 mins ago</p>
+          </div>
+          <div class="progress__image">
+            <img src="img/progress-2.svg" alt="#">
+          </div>
+        </div>
+        <!-- /.progress__group -->
+        <div class="progress__status">
+          <div class="progress__color progress__color--green"></div>
+        </div>
+
+        <div class="progress__group">
+          <img src="img/progress-file.svg" alt="file">
+          <div class="progress__text">
+            <p class="progress__file-name">File Name.jpg</p>
+            <p class="progress__time">23 mins ago</p>
+          </div>
+          <div class="progress__image bg--red">
+            <img src="img/progress-3.svg" alt="#">
+          </div>
+        </div>
+        <!-- /.progress__group -->
+        <div class="progress__status">
+          <div class="progress__color progress__color--red"></div>
+        </div>
+
+        <div class="progress__group">
+          <img src="img/progress-file.svg" alt="file">
+          <div class="progress__text">
+            <p class="progress__file-name">File Name.jpg</p>
+            <p class="progress__time">23 mins ago</p>
+          </div>
+          <div class="progress__image">
+            <img src="img/progress-3.svg" alt="#">
+          </div>
+        </div>
+        <!-- /.progress__group -->
+        <div class="progress__status">
+          <div class="progress__color progress__color--yellow"></div>
+        </div>
+
+      </div>
+      <!-- /.components__item -->
+      <div class="components__item">
+        <div class="upload__icon">
+          <img src="img/progress-end.svg" alt="#">
+        </div>
+        <p class="upload__title upload__title-end">Upload Complete!</p>
+        <button class="upload__button button button--wight">Upload New</button>
+
+      </div>
+      <!-- /.components__item -->
     </form>
     <!-- /.form__group -->
 

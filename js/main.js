@@ -280,3 +280,35 @@ modal.addEventListener('click', (event) => {
   };
   
 });
+
+
+// Progress circle
+
+const circle = document.querySelector('.progress-ring');
+const radius = circle.r.baseVal.value;
+const circleLine = 2 * Math.PI * radius;
+const input = document.querySelector('.percent');
+
+const start = setProgress(input.value);
+
+input.addEventListener('change', () => {
+  setProgress(input.value);
+});
+
+circle.style.strokeDasharray = `${circleLine} ${circleLine}`;
+circle.style.strokeDashoffset = `${circleLine - start / 100 * circleLine}`;
+
+function setProgress(percent) {
+  const offset = circleLine - percent / 100 * circleLine;
+  circle.style.strokeDashoffset = offset;
+}
+
+// Progress bar
+
+const progressPercent = document.querySelector('.progress-percent');
+var progressValue = document.querySelector('.progress-value');
+
+progressPercent.addEventListener('change', () => {
+  const newValue = progressPercent.value;
+  progressValue.value = newValue;
+});
