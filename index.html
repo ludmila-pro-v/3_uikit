@@ -42,10 +42,10 @@
           <label for="form-choose" class="form__label">Please choose:</label>
           <noscript>
             <select size="1" name="choose" id="form-choose" class="form__input">
-              <option value="Option">Option</option>
-              <option value="Option-1">Option-1</option>
-              <option value="Option-2">Option-2</option>
-              <option value="Option-3">Option-3</option>
+              <div value="Option">Option</div>
+              <div value="Option-1">Option-1</div>
+              <div value="Option-2">Option-2</div>
+              <div value="Option-3">Option-3</div>
             </select>
           </noscript>
 
@@ -100,10 +100,10 @@
         <input type="text" class="form__input fotm__input--blue" id="formblue" placeholder="Value">
         <noscript>
           <select size="1" name="choose-1" id="Choose">
-            <option value="Choose">Choose</option>
-            <option value="Choose-1">Choose-1</option>
-            <option value="Choose-2">Choose-2</option>
-            <option value="Choose-3">Choose-3</option>
+            <div value="Choose">Choose</div>
+            <div value="Choose-1">Choose-1</div>
+            <div value="Choose-2">Choose-2</div>
+            <div value="Choose-3">Choose-3</div>
           </select>
         </noscript>
 
@@ -188,17 +188,17 @@
           <!-- /.form__bar -->
           <div class="form__bar">
             <div class=" slider-value"></div>
-            <div class="sliders"></div>
+            <div class="sliders handler__drop"></div>
           </div>
           <!-- /.form__bar -->
           <div class="form__bar">
             <div class="slider-value"></div>
-            <div class="sliders-1"></div>
+            <div class="sliders-1 handler__drop"></div>
           </div>
           <!-- /.form__bar -->
           <div class="form__bar">
             <div class="slider-value"></div>
-            <div class="sliders-1"></div>
+            <div class="sliders-1 handler__drop"></div>
           </div>
           <!-- /.form__bar -->
         </div>
@@ -380,7 +380,7 @@
       </div>
       <!-- /.form__col -->
 
-      <div class="form__col-bg">
+      <div class="form__col-sm">
         <div class="tabs__nav tabs-nav__serch">
           <input type="radio" name="tab-btn" id="tab-btn-1" value="" checked>
           <label for="tab-btn-1" class="tabs-nav__item  item__serch item__first">
@@ -511,19 +511,11 @@
           <button class="multisteps-form__progress-btn" type="button" title="Step 3"></button>
         </div>
         <!-- multisteps-form__progress -->
-        <div class="form__col-bg form__vertical">
-          <div class="multisteps-form__progress multisteps-form__progress-bg">
-            <button class="multisteps-form__progress-btn js-active" type="button" title="Step 1"></button>
-            <button class="multisteps-form__progress-btn js-next" type="button" title="Step 2"></button>
-            <button class="multisteps-form__progress-btn" type="button" title="Step 3"></button>
-            <button class="multisteps-form__progress-btn" type="button" title="Step 3"></button>
-          </div>
-        </div>
-        <!-- /.form form-vertical -->
+
       </div>
       <!-- /.form__col-bg -->
 
-      <div class="form__col-bg form__col-navigation">
+      <div class="form__col-sm form__col-navigation">
         <h2>Tabs & Icons</h2>
         <ul class="tabs__group">
           <li>
@@ -776,13 +768,21 @@
               3</button>
           </li>
         </ul>
-
+        <div class="form__col-bg form__vertical">
+          <div class="multisteps-form__progress multisteps-form__progress-bg">
+            <button class="multisteps-form__progress-btn js-active" type="button" title="Step 1"></button>
+            <button class="multisteps-form__progress-btn js-next" type="button" title="Step 2"></button>
+            <button class="multisteps-form__progress-btn" type="button" title="Step 3"></button>
+            <button class="multisteps-form__progress-btn" type="button" title="Step 3"></button>
+          </div>
+        </div>
+        <!-- /.form form-vertical -->
       </div>
       <!-- /.form__col-bg -->
     </form>
     <!-- /.form__group -->
 
-    <form action="#" class="form__group" id="section-4">
+    <form action="#" class="form__group form__alert" id="section-4">
       <div class="alert__wrapper">
         <div class="alert__group">
           <div class="alert__item alert--blue">
@@ -1024,6 +1024,131 @@
     </form>
     <!-- /.form__group -->
 
+    <form action="#" class="form__group">
+      <h2>Tables</h2>
+      <div class="table__wrap">
+        <table class="table-1">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Last Updated</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Eduardo Pena</td>
+              <td>3 mins ago</td>
+              <td>
+                <img src="img/ellipsis.svg" alt="...">
+              </td>
+            </tr>
+            <tr>
+              <td>Evan Robertson</td>
+              <td>Yesterday</td>
+              <td>
+                <img src="img/ellipsis.svg" alt="...">
+              </td>
+            </tr>
+            <tr>
+              <td>Kathryn Lane</td>
+              <td>Dec 31, 2019</td>
+              <td>
+                <img src="img/ellipsis.svg" alt="...">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- /.table__wrap -->
+
+      <div class="table__title">
+        <h2>Table Name</h2>
+        <input type="text" class="form__input serch-left table__input" placeholder="Search">
+      </div>
+      <div class="table__wrap">
+        <table class="table-2">
+          <thead>
+            <tr>
+              <th>
+                <input class="option-checkbox" type="checkbox" id="option-4">
+                <label for="option-4"></label>
+              </th>
+              <th>Name</th>
+              <th>Location</th>
+              <th>Last Updated</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <input class="option-checkbox" type="checkbox" id="option-5" checked>
+                <label for="option-5"></label>
+              </td>
+              <td>Devon Flores</td>
+              <td>Tucson, United States</td>
+              <td>3 mins ago</td>
+              <td>
+                <img src="img/ellipsis.svg" alt="...">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input class="option-checkbox" type="checkbox" id="option-6">
+                <label for="option-6"></label>
+              </td>
+              <td>Nathan Webb</td>
+              <td>Orange, United States</td>
+              <td>Yesterday</td>
+              <td>
+                <img src="img/ellipsis.svg" alt="...">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input class="option-checkbox" type="checkbox" id="option-7">
+                <label for="option-7"></label>
+              </td>
+              <td>Beth Black</td>
+              <td>Westminster, United States</td>
+              <td>Dec 31, 2019</td>
+              <td>
+                <img src="img/ellipsis.svg" alt="...">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input class="option-checkbox" type="checkbox" id="option-8">
+                <label for="option-8"></label>
+              </td>
+              <td>Bernard Flores</td>
+              <td>Stamford United States</td>
+              <td>Dec 17, 2019</td>
+              <td>
+                <img src="img/ellipsis.svg" alt="...">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input class="option-checkbox" type="checkbox" id="option-9">
+                <label for="option-9"></label>
+              </td>
+              <td>Theresa Alexander</td>
+              <td>Santa Ana United States</td>
+              <td>Nov 20, 2019</td>
+              <td>
+                <img src="img/ellipsis.svg" alt="...">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- /.table__wrap -->
+
+      
+    </form>
+    <!-- /.form__group -->
   </section>
   <!-- /.forms -->
 </body>

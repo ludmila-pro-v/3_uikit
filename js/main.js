@@ -29,7 +29,7 @@ var sliders = document.getElementsByClassName('sliders');
 for ( var i = 0; i < sliders.length; i++ ) {
 
     noUiSlider.create(sliders[i], {
-        start: 100,
+        start: 15,
         step: 1,
         tooltips: true,
         connect: [true, false],
@@ -37,23 +37,32 @@ for ( var i = 0; i < sliders.length; i++ ) {
         orientation: "horizontal",
         range: {
             'min': 0,
-            'max': 200
+            'max': 30
         },
+        format: {
+          to: function ( value ) {
+            return value + '';
+          },
+          from: function ( value ) {
+            return value.replace('', '');
+          }
+        }
     });
 
-    sliders[i].noUiSlider.on('slide', addValues);
+    sliders[i].noUiSlider.on('slide', addValue);
+    
 }
 
-function addValues(){
+function addValue(){
     var allValues = [];
 
     for (var i = 0; i < sliders.length; i++) {
         allValues.push(sliders[i].noUiSlider.get());
     };
     
-    for (var j = 0; j < allValues.length; j++) {
-    document.getElementsByClassName('slider-value')[j].innerHTML = allValues[j];
-    }
+    // for (var j = 0; j < allValues.length; j++) {
+    // document.getElementsByClassName('slider-value')[j].innerHTML = allValues[j];
+    // }
 
 }
 
@@ -64,16 +73,25 @@ var slidersOne = document.getElementsByClassName('sliders-1');
 for ( var i = 0; i < slidersOne.length; i++ ) {
 
     noUiSlider.create(slidersOne[i], {
-        start: [30, 100],
+        start: [15, 34],
         step: 1,
-        tooltips: false,
+        tooltips: true,
         connect: true,
         padding: 6,
         orientation: "horizontal",
         range: {
             'min': 0,
-            'max': 200
+            'max': 50
         },
+        format: {
+          to: function ( value ) {
+            return value + '';
+          },
+          from: function ( value ) {
+            return value.replace('', '');
+          }
+        }
+
     });
 
     slidersOne[i].noUiSlider.on('slide', addValues);
@@ -86,12 +104,23 @@ function addValues(){
         allValues.push(slidersOne[i].noUiSlider.get());
     };
     
-    for (var j = 0; j < allValues.length; j++) {
-    document.getElementsByClassName('slider-value')[j].innerHTML = allValues[j];
-    }
-
 }
 
+
+// format value
+
+// var handlesValue = document.getElementsByClassName('noUi-tooltip');
+// roundValue();
+
+// handlesValue.addEventListener('change', roundValue());
+
+// function roundValue () {
+//   for (item = 0; item < handlesValue.length; item++) {
+//     console.log('item: ', item);
+//     i = handlesValue[item].innerHTML;
+//     handlesValue[item].innerHTML = Math.round(i);
+//   }
+// }   
 
 // End of custom slider
 
@@ -101,7 +130,7 @@ function addValues(){
 let select = function () {
   selectHeader = document.querySelectorAll('.select__header');
   selectItem = document.querySelectorAll('.select__item');
-  selectHeader.forEach(item=> {
+  selectHeader.forEach (item => {
     item.addEventListener('click', selectToggle);
   });
 
