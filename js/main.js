@@ -1,20 +1,21 @@
-// V-calender
+// Calendar
 
-// import Vue from 'vue';
-// import { createApp } from 'vue';
-// import VCalendar from 'v-calendar';
 
-// Use v-calendar & v-date-picker components
-// Vue.use(VCalendar, {
-//   componentPrefix: 'vc',
-// });
+document.addEventListener("DOMContentLoaded", function (event) {
 
-// new Vue({
-//     el: '#app',
-//     data: {
-//       selectedDate: null,
-//     }
-//   });
+  flatpickr(".flatpickr", {
+    mode: "range",
+    inline: "true",
+  });
+
+  // flatpickr("#calendar", {
+
+  // });
+
+});
+
+
+
 
 
 
@@ -26,43 +27,43 @@
 
 var sliders = document.getElementsByClassName('sliders');
 
-for ( var i = 0; i < sliders.length; i++ ) {
+for (var i = 0; i < sliders.length; i++) {
 
-    noUiSlider.create(sliders[i], {
-        start: 15,
-        step: 1,
-        tooltips: true,
-        connect: [true, false],
-        padding: 6,
-        orientation: "horizontal",
-        range: {
-            'min': 0,
-            'max': 30
-        },
-        format: {
-          to: function ( value ) {
-            return value + '';
-          },
-          from: function ( value ) {
-            return value.replace('', '');
-          }
-        }
-    });
+  noUiSlider.create(sliders[i], {
+    start: 15,
+    step: 1,
+    tooltips: true,
+    connect: [true, false],
+    padding: 6,
+    orientation: "horizontal",
+    range: {
+      'min': 0,
+      'max': 30
+    },
+    format: {
+      to: function (value) {
+        return value + '';
+      },
+      from: function (value) {
+        return value.replace('', '');
+      }
+    }
+  });
 
-    sliders[i].noUiSlider.on('slide', addValue);
-    
+  sliders[i].noUiSlider.on('slide', addValue);
+
 }
 
-function addValue(){
-    var allValues = [];
+function addValue() {
+  var allValues = [];
 
-    for (var i = 0; i < sliders.length; i++) {
-        allValues.push(sliders[i].noUiSlider.get());
-    };
-    
-    // for (var j = 0; j < allValues.length; j++) {
-    // document.getElementsByClassName('slider-value')[j].innerHTML = allValues[j];
-    // }
+  for (var i = 0; i < sliders.length; i++) {
+    allValues.push(sliders[i].noUiSlider.get());
+  };
+
+  // for (var j = 0; j < allValues.length; j++) {
+  // document.getElementsByClassName('slider-value')[j].innerHTML = allValues[j];
+  // }
 
 }
 
@@ -70,40 +71,40 @@ function addValue(){
 
 var slidersOne = document.getElementsByClassName('sliders-1');
 
-for ( var i = 0; i < slidersOne.length; i++ ) {
+for (var i = 0; i < slidersOne.length; i++) {
 
-    noUiSlider.create(slidersOne[i], {
-        start: [15, 34],
-        step: 1,
-        tooltips: true,
-        connect: true,
-        padding: 6,
-        orientation: "horizontal",
-        range: {
-            'min': 0,
-            'max': 50
-        },
-        format: {
-          to: function ( value ) {
-            return value + '';
-          },
-          from: function ( value ) {
-            return value.replace('', '');
-          }
-        }
+  noUiSlider.create(slidersOne[i], {
+    start: [15, 34],
+    step: 1,
+    tooltips: true,
+    connect: true,
+    padding: 6,
+    orientation: "horizontal",
+    range: {
+      'min': 0,
+      'max': 50
+    },
+    format: {
+      to: function (value) {
+        return value + '';
+      },
+      from: function (value) {
+        return value.replace('', '');
+      }
+    }
 
-    });
+  });
 
-    slidersOne[i].noUiSlider.on('slide', addValues);
+  slidersOne[i].noUiSlider.on('slide', addValues);
 }
 
-function addValues(){
-    var allValues = [];
+function addValues() {
+  var allValues = [];
 
-    for (var i = 0; i < slidersOne.length; i++) {
-        allValues.push(slidersOne[i].noUiSlider.get());
-    };
-    
+  for (var i = 0; i < slidersOne.length; i++) {
+    allValues.push(slidersOne[i].noUiSlider.get());
+  };
+
 }
 
 
@@ -130,26 +131,26 @@ function addValues(){
 let select = function () {
   selectHeader = document.querySelectorAll('.select__header');
   selectItem = document.querySelectorAll('.select__item');
-  selectHeader.forEach (item => {
+  selectHeader.forEach(item => {
     item.addEventListener('click', selectToggle);
   });
 
-  selectItem.forEach(item=> {
+  selectItem.forEach(item => {
     item.addEventListener('click', selectChoose);
   });
 
-  function selectToggle () {
+  function selectToggle() {
     this.parentElement.classList.toggle('is-active')
   }
 
-  function selectChoose () {
+  function selectChoose() {
     text = this.innerText;
     select = this.closest('.select');
     changeText = select.querySelector('.select__change');
-    changeText.innerText = text; 
+    changeText.innerText = text;
     changeText.classList.remove('select__start');
     select.classList.remove('is-active');
-    
+
   }
 
 };
@@ -224,39 +225,39 @@ DOMstrings.stepsBar.forEach(elem => {
 
     //check if click target is a step button
     const eventTarget = e.target;
-  
-    
-  
+
+
+
     if (!eventTarget.classList.contains(`${DOMstrings.stepsBtnClass}`)) {
       return;
     }
 
 
     var progressItems = elem.querySelectorAll('.multisteps-form__progress-btn');
-    
-  
+
+
     //get active button step number
     const activeStep = getActiveStep(eventTarget);
 
     //set all steps before clicked (and clicked too) to active
-  
+
     removeClasses(progressItems, 'js-active');
     removeClasses(progressItems, 'js-next');
 
     //set picked items to active
     progressItems.forEach((elem, index) => {
-  
+
       if (index <= activeStep) {
         elem.classList.add('js-active');
       }
-        
+
     });
     var nextIndex = activeStep + 1;
     if (nextIndex < progressItems.length) {
       progressItems[nextIndex].classList.add('js-next')
     }
   });
-}); 
+});
 // End of step by step Navigation
 
 // Pagination
@@ -303,11 +304,11 @@ const modal = document.querySelector('.modal');
 modal.addEventListener('click', (event) => {
   const target = event.target;
   const modalOpen = modal.querySelector('.modal__window');
-  if(target.classList.contains('overlay') || target.classList.contains('modal__close')  ) {
+  if (target.classList.contains('overlay') || target.classList.contains('modal__close')) {
     modalOpen.classList.toggle('hidden');
     modalOpen.classList.toggle('modal__wrapper');
   };
-  
+
 });
 
 
