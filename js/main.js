@@ -1,3 +1,19 @@
+// select
+
+const choiseElems = document.querySelectorAll('[data-trigger]');
+// console.log('elems: ', choiseElems);
+
+choiseElems.forEach(item => {
+
+  const choices = new Choices(item, {
+    itemSelectText: '',
+    searchEnabled: false
+
+  });
+
+});
+
+
 // Calendar
 
 
@@ -6,6 +22,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
   flatpickr(".flatpickr", {
     mode: "range",
     inline: "true",
+    nextArrow: "<img src='img/calendar-next.svg' alt='>'>",
+    prevArrow: "<img src='img/calendar-prev.svg' alt='>'>"
   });
 
   // flatpickr("#calendar", {
@@ -40,14 +58,11 @@ for (var i = 0; i < sliders.length; i++) {
       'min': 0,
       'max': 30
     },
-    format: {
-      to: function (value) {
-        return value + '';
-      },
-      from: function (value) {
-        return value.replace('', '');
-      }
-    }
+    format: wNumb({
+      decimals: 0,
+      thousand: '',
+      suffix: ''
+    })
   });
 
   sliders[i].noUiSlider.on('slide', addValue);
@@ -128,35 +143,6 @@ function addValues() {
 
 
 
-let select = function () {
-  selectHeader = document.querySelectorAll('.select__header');
-  selectItem = document.querySelectorAll('.select__item');
-  selectHeader.forEach(item => {
-    item.addEventListener('click', selectToggle);
-  });
-
-  selectItem.forEach(item => {
-    item.addEventListener('click', selectChoose);
-  });
-
-  function selectToggle() {
-    this.parentElement.classList.toggle('is-active')
-  }
-
-  function selectChoose() {
-    text = this.innerText;
-    select = this.closest('.select');
-    changeText = select.querySelector('.select__change');
-    changeText.innerText = text;
-    changeText.classList.remove('select__start');
-    select.classList.remove('is-active');
-
-  }
-
-};
-
-
-select();
 
 
 // tabs
@@ -342,3 +328,45 @@ progressPercent.addEventListener('change', () => {
   const newValue = progressPercent.value;
   progressValue.value = newValue;
 });
+
+
+// Scroll
+
+const anchors = document.querySelectorAll('a.scroll__to');
+
+for (let anchor of anchors) {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault()
+
+    const blockID = anchor.getAttribute('href')
+
+    document.querySelector(blockID).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  });
+}
+
+
+// Table
+const checkbox = document.getElementById("clear");
+const formBlock = document.getElementById("tableName");
+const inputArr = formBlock.querySelectorAll(".name-checkbox");
+
+checkbox.addEventListener("click", () => {
+  checkbox.toggleAttribute("checked");
+  changeAll();
+});
+
+
+function changeAll() {
+  if (checkbox.checked) {
+    inputArr.forEach(el => {
+    el.checked = true;
+    });
+  } else {
+    inputArr.forEach(el => {
+      el.checked = false;
+    });
+  }
+};
