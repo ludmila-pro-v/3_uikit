@@ -361,10 +361,9 @@ textarea:invalid::-webkit-input-placeholder,
   flex-shrink: 0;
   flex-grow: 0;
   border: 1px solid #E0E0E0;
-  
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 50% 50%;
+  background-size: 8px;
 }
 
 .option-checkbox+span,
@@ -415,7 +414,7 @@ th label .option-checkbox+span::before {
 
 
 .radio-checkbox:checked+span::before {
-  border: 6px solid #18A0FB;
+  border: 4px solid #18A0FB;
 
 }
 
@@ -2178,10 +2177,7 @@ table {
     border-bottom: 1px solid #ddd;
     display: block;
     text-align: right;
-  }
-
-  .table-2 td:nth-child(1) {
-    padding-top: 12px;
+    padding: 16px 12px;
   }
 
   .table-1 td:nth-child(2), .table-2 td:nth-child(4) {
@@ -2205,6 +2201,18 @@ table {
 
   td, th {
     padding-right: 12px;
+  }
+
+  .table__title h2 {
+    margin: 28px;
+  }
+
+  .serch-left {
+    width: 100%;
+  }
+
+  td .option-checkbox+span {
+    margin-right: 0;
   }
 
 
